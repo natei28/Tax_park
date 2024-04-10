@@ -1,0 +1,27 @@
+
+@font-face {
+    font-family: 'Proxima Nova Semibold';
+    src: url('..css/fonts/ProximaNova-Semibold.eot');
+    src: url('..css/fonts/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
+    url('..css/fonts/ProximaNova-Semibold.woff') format('woff'),
+    url('..css/fonts/ProximaNova-Semibold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'Proxima Nova Light';
+    src: url('..css/fonts/ProximaNova-Light.eot');
+    src: url('..css/fonts/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
+    url('..css/fonts/ProximaNova-Light.woff') format('woff'),
+    url('..css/fonts/ProximaNova-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+@mixin bold {
+    font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+@mixin light {
+    font-family: 'Proxima Nova Light', sans-serif;
+}
