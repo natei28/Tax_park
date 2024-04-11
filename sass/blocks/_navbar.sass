@@ -1,12 +1,49 @@
 .navbar
+    position: fixed
+    left: 0px
+    top: 0px
+    width: 100%
+    background-color: #fff
     &-wrap 
         display: flex
+        justify-content: space-between
         align-items: center
         min-height: 80px
-    &__menu-button
-        margin-right: 30px
+    &__mobile, &__landline
+        text-align: right 
+    &__phone
+        display: block
+        margin-bottom: 5px
+        font-size: 19px
+        text-decoration: none
+        color: $text-color
+    &__small-text
+        display: block
+        text-decoration: none
+        font-size: 14px
+        color: $text-color-light
 
 .menu
+    position: fixed
+    z-index: 0
+    top: 80px
+    left: 0px
+    width: 100%
+    padding:16px 0px
+    background-color: $primary
+    transition: 0.2s
+    transform: translateY(-100%)
+    &_activ
+        transform: translateY(0)
+    &__nav
+        display: flex
+        align-items: center
+        justify-content: space-around
+    &__link
+        text-decoration: none
+        font-size: 17px
+        text-transform: uppercase
+        color: #fff
     &-button
         display: flex
         flex-direction: column
@@ -28,10 +65,11 @@
 .logo
     &__text
         display: block
+        margin-bottom: 5px
         font-size: 18px
         text-transform: uppercase
         +bold
     &__description
         display: block
         font-size: 14px
-        color: #6b6b6b
+        color: $text-color-light
