@@ -32,8 +32,10 @@
     background-color: $primary
     transition: 0.2s
     transform: translateY(-200%)
+    opacity: 0
     &_activ
         transform: translateY(0)
+        opacity: 1
     &__nav
         display: flex
         align-items: center
@@ -52,7 +54,7 @@
         border: none
         border-right: 1px solid rgba(#510bba, 0.1) 
         border-left: 1px solid rgba(#510bba, 0.1) 
-        height: 80px
+        height: 60px
         width: 70px
         &__line
             display: block
@@ -84,9 +86,6 @@
     .logo
         display: none
     .menu
-        &-button
-            height: 60px
-            width: 70px
         &__nav
             flex-direction: column
         &__link
