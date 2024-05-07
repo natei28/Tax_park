@@ -42,6 +42,19 @@ body {
   color: #262626;
 }
 
+.section {
+  padding: 100px 0px;
+}
+.section-title {
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Proxima Nova Semibold", sans-serif;
+}
+.section__title {
+  margin-bottom: 100px;
+}
+
 .button-o {
   border: 2px solid rgba(20, 105, 185, 0.9254901961);
   text-transform: uppercase;
@@ -97,6 +110,12 @@ input[type=checkbox]:checked + label:before {
 @media (max-width: 576px) {
   .button-o {
     font-size: 10px;
+  }
+  .section {
+    padding: 60px 0px;
+  }
+  .section-title {
+    font-size: 24px;
   }
 }
 .navbar {
@@ -211,7 +230,7 @@ input[type=checkbox]:checked + label:before {
   background: #f1f1f1 url("../img/hero/hero-bg.jpg") no-repeat;
   background-size: cover;
   background-position: top center;
-  border: 1px solid red;
+  border: 1px solid black;
   padding-top: 60px;
   padding-bottom: 70px;
   margin-top: 60px;
@@ -312,5 +331,30 @@ input[type=checkbox]:checked + label:before {
   }
   .form__input {
     margin-bottom: 20px;
+  }
+}
+.features-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.features-block__item {
+  flex-basis: 33.3%;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.features-block__image {
+  width: 100px;
+}
+
+@media (max-width: 991px) {
+  .features-block__item {
+    flex-basis: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .features-block__item {
+    flex-basis: 100%;
+    margin-bottom: 50px;
   }
 }/*# sourceMappingURL=style.css.map */
