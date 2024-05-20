@@ -1,0 +1,58 @@
+.locations
+    &-block
+        display: flex
+        justify-content: space-between
+        align-content: center
+        text-align: center
+        flex-wrap: wrap
+    &__card
+        margin-bottom: 30px
+    &-card
+        max-width: 570px
+        position: relative
+        box-shadow: 7px 5px 21px rgba(0, 0, 0, 0 )
+        z-index: 0
+        &__buttons
+            position: absolute
+            bottom: 0px
+            right: 0px
+            display: flex
+        &__button
+            text-transform: uppercase
+            font-size: 11px
+            height: 30px
+            border: none
+        &__tag
+            position: absolute
+            top: 10px
+            left: 10px
+            font-size: 12px
+            text-transform: uppercase
+            color: #fff
+            background-color: rgba($primary, 0.6)
+            padding:10px
+        &__img
+            display: block
+    &__link
+        text-align: center
+        margin-top: 20px
+    &__link-more
+        display: inline-block
+        margin-bottom: 24px
+    &__description
+        display: block
+
+@media (max-width:1199px)
+    .locations  
+        &-card 
+            max-width: 470px
+@media (max-width:991px)
+    .locations   
+        &-card 
+            max-width: 360px
+@media (max-width:768px)
+    .locations   
+        &-block 
+            justify-content: center
+        &-card 
+            max-width: 390px

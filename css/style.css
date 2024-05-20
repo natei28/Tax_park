@@ -42,6 +42,10 @@ body {
   color: #262626;
 }
 
+img {
+  max-width: 100%;
+}
+
 .section {
   padding: 100px 0px;
 }
@@ -58,6 +62,7 @@ body {
 .button-o {
   border: 2px solid rgba(20, 105, 185, 0.9254901961);
   text-transform: uppercase;
+  text-decoration: none;
   padding: 17px 22px;
   font-size: 12px;
   color: rgba(20, 105, 185, 0.9254901961);
@@ -68,10 +73,27 @@ body {
 .button {
   border: none;
   text-transform: uppercase;
+  text-decoration: none;
   padding: 25px 45px;
   background-color: rgba(20, 105, 185, 0.9254901961);
   color: #fff;
   font-family: "Proxima Nova Semibold", sans-serif;
+}
+.button-fitting {
+  color: rgba(20, 105, 185, 0.9254901961);
+  background-color: #fff;
+  padding: 10px;
+}
+.button-add {
+  color: #fff;
+  background-color: rgba(26, 131, 230, 0.9254901961);
+  padding: 10px;
+}
+.button-like {
+  background-color: rgba(20, 105, 185, 0.9254901961);
+  width: 30px;
+  height: 30px;
+  padding: 5px;
 }
 
 .bg-secondary {
@@ -120,6 +142,7 @@ input[type=checkbox]:checked + label:before {
 }
 .navbar {
   position: fixed;
+  z-index: 1;
   left: 0px;
   top: 0px;
   width: 100%;
@@ -149,7 +172,7 @@ input[type=checkbox]:checked + label:before {
 
 .menu {
   position: fixed;
-  z-index: 0;
+  z-index: 1;
   top: 60px;
   left: 0px;
   width: 100%;
@@ -230,7 +253,6 @@ input[type=checkbox]:checked + label:before {
   background: #f1f1f1 url("../img/hero/hero-bg.jpg") no-repeat;
   background-size: cover;
   background-position: top center;
-  border: 1px solid black;
   padding-top: 60px;
   padding-bottom: 70px;
   margin-top: 60px;
@@ -356,5 +378,121 @@ input[type=checkbox]:checked + label:before {
   .features-block__item {
     flex-basis: 100%;
     margin-bottom: 50px;
+  }
+}
+.locations-block {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.locations__card {
+  margin-bottom: 30px;
+}
+.locations-card {
+  max-width: 570px;
+  position: relative;
+  box-shadow: 7px 5px 21px rgba(0, 0, 0, 0);
+  z-index: 0;
+}
+.locations-card__buttons {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  display: flex;
+}
+.locations-card__button {
+  text-transform: uppercase;
+  font-size: 11px;
+  height: 30px;
+  border: none;
+}
+.locations-card__tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: rgba(20, 105, 185, 0.6);
+  padding: 10px;
+}
+.locations-card__img {
+  display: block;
+}
+.locations__link {
+  text-align: center;
+  margin-top: 20px;
+}
+.locations__link-more {
+  display: inline-block;
+  margin-bottom: 24px;
+}
+.locations__description {
+  display: block;
+}
+
+@media (max-width: 1199px) {
+  .locations-card {
+    max-width: 470px;
+  }
+}
+@media (max-width: 991px) {
+  .locations-card {
+    max-width: 360px;
+  }
+}
+@media (max-width: 768px) {
+  .locations-block {
+    justify-content: center;
+  }
+  .locations-card {
+    max-width: 390px;
+  }
+}
+.blog__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 70px;
+}
+.blog__title {
+  font-size: 24px;
+  font-family: "Proxima Nova Semibold", sans-serif;
+}
+.blog__link-more {
+  color: rgba(20, 105, 185, 0.9254901961);
+  font-size: 16px;
+}
+.blog-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.blog-list__image {
+  height: 200px;
+  overflow: hidden;
+}
+.blog-list__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80px;
+}
+.blog-list-card {
+  margin-bottom: 50px;
+}
+.blog-card {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 1199px) {
+  .blog-list {
+    justify-content: space-around;
+  }
+  .blog-list-card {
+    margin-right: 30px;
+    margin-left: 30px;
   }
 }/*# sourceMappingURL=style.css.map */
