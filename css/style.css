@@ -17,12 +17,6 @@
     max-width: 750px;
   }
 }
-@media (max-width: 768px) {
-  .container {
-    max-width: 100%;
-    padding: 0 20px;
-  }
-}
 @font-face {
   font-family: "Proxima Nova Semibold";
   src: url("../fonts/ProximaNova-Semibold.eot");
@@ -81,6 +75,7 @@ img {
 }
 .button:hover {
   cursor: pointer;
+  background-color: #099c84;
 }
 .button-fitting {
   color: rgba(20, 105, 185, 0.9254901961);
@@ -290,6 +285,12 @@ input[type=checkbox]:checked + label:before {
   padding: 80px;
   margin-top: -160px;
 }
+.offer-block__bg-call-1 {
+  background: #fff url("../img/offer/offer-bg-call-1.png") no-repeat center right -220px;
+}
+.offer-block__bg-call-2 {
+  background: #fff url("../img/offer/offer-bg-call-2.png") no-repeat center right -220px;
+}
 .offer__title {
   font-size: 25px;
   text-transform: uppercase;
@@ -300,13 +301,14 @@ input[type=checkbox]:checked + label:before {
   display: block;
   font-size: 21px;
   margin-bottom: 48px;
+  max-width: 800px;
 }
 
 .form__row {
   display: flex;
   align-items: center;
   max-width: 900px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 .form__row:last-child {
   margin-bottom: 0px;
@@ -330,13 +332,18 @@ input[type=checkbox]:checked + label:before {
   height: 80px;
   width: 100%;
 }
+.form__policy {
+  display: inline-block;
+  margin-left: 45px;
+  font-size: 17px;
+}
 
 @media (max-width: 1199px) {
   .offer-block {
     background-position: center right -270px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 990px) {
   .offer-block {
     background-image: none;
     padding: 40px;
@@ -356,9 +363,15 @@ input[type=checkbox]:checked + label:before {
   .form__group {
     flex-basis: 100%;
     width: 100%;
+    margin-bottom: 30px;
   }
-  .form__input {
-    margin-bottom: 20px;
+  .form__group:last-child {
+    margin-bottom: 0px;
+  }
+  .form__policy {
+    margin: auto;
+    text-align: center;
+    display: block;
   }
 }
 @media (max-width: 480px) {
@@ -555,11 +568,123 @@ input[type=checkbox]:checked + label:before {
   bottom: -80px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
   .price-block {
-    justify-content: center;
+    flex-basis: 40%;
+    justify-content: space-evenly;
   }
   .price-block__card {
     margin: 20px;
   }
+}
+.step {
+  position: relative;
+  text-align: center;
+}
+.step:last-child:before {
+  display: none;
+}
+.step:before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: rgba(126, 123, 120, 0.7);
+  display: block;
+  position: absolute;
+  top: 80px;
+  left: 101px;
+}
+.step__title {
+  font-size: 22px;
+}
+.step__text {
+  max-width: 160px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+.step__image {
+  max-width: 75px;
+}
+.steps-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 991px) {
+  .step {
+    flex-basis: 33%;
+  }
+  .step:before {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .step {
+    flex-basis: 40%;
+  }
+  .steps-block {
+    justify-content: space-evenly;
+  }
+}
+@media (max-width: 460px) {
+  .step {
+    flex-basis: 100%;
+  }
+}
+.rewiews {
+  background-color: #f5f6f8;
+}
+.rewiews-slider {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.rewiews-slider__item {
+  text-align: center;
+  align-items: center;
+}
+.rewiews-slider__image {
+  display: block;
+  margin: 20px auto;
+  width: 70px;
+  height: 70px;
+  border: 2px solid #6a99e9;
+  border-radius: 60%;
+}
+.rewiews-slider__text {
+  position: relative;
+  max-width: 370px;
+  padding: 20px;
+  font-size: 15px;
+  font-style: italic;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+.rewiews-slider__text:after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 20px solid transparent;
+  border-top: 20px solid #fff;
+}
+
+.forejob-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.forejob-block__image {
+  margin: 20px;
+  align-content: center;
+}
+.forejob-block__text {
+  flex-basis: 50%;
+  margin: 20px;
+  font-size: 20px;
+  align-content: center;
 }/*# sourceMappingURL=style.css.map */
