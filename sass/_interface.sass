@@ -5,6 +5,17 @@ body
 img
     max-width: 100%
 
+.header1
+    position: sticky
+    top:-60px
+    z-index: 999
+
+.sticky-header
+    position: fixed
+    width: 100%
+    top:-50px
+    z-index: 999
+
 .section
     padding: 100px 0px
     &-title
@@ -52,7 +63,8 @@ img
         
 .bg-secondary
     background-color: $bg-secondary
-
+.bg-tertiary
+    background-color: $bg-tertiary
 .input
     height: 80px 
     padding-left: 30px
@@ -77,6 +89,9 @@ input[type="checkbox"]
             margin-right: 20px          
 
 @media (max-width:576px)
+    .header
+        position: sticky
+        top:0px
     .button
         font-size: 10px
         &-o

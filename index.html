@@ -1,57 +1,85 @@
-//**-*<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Парк В пути</title>
+    <title>Lili Travel</title>
+    
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="menu">
-            <div class="container">
-                <nav class="menu__nav">
-                    <a href="#" class="menu__link">Главная</a>
-                    <a href="#" class="menu__link">Автопарк</a>
-                    <a href="#" class="menu__link">Условия</a>
-                    <a href="#" class="menu__link">Аренда</a>
-                    <a href="#" class="menu__link">Новости</a>
-                    <a href="#" class="menu__link">Отзывы</a>
-                    <a href="#" class="menu__link">Контакты</a>
-                </nav>
-            </div>
-            <!-- /.menu-wrap -->
-        </div>
-        <!-- /.menu -->
+    <header class="header page-header" id="page-header">
         <div class="navbar">
             <div class="container">
                 <div class="navbar-wrap">
-                    <button class="menu-button navbar__menu-button">
+                    <label for="menu__right-button" class="menu-button menu-button-right">
                         <span class="menu-button__line"></span>
                         <span class="menu-button__line"></span>
                         <span class="menu-button__line"></span>
-                    </button>
+                    </label>
                     <div class="logo navbar__logo">
-                        <strong class="logo__text">Таксопарк Vпути</strong>
-                        <span class="logo__description">Прямой партнер Ядекс.ПРО</span>
+                        <strong class="logo__text">Lili Travel</strong>
+                        <span class="logo__description">Ваш проводник в мир отдыха</span>
                     </div>
-                    <div class="navbar__mobile">
-                        <a class="navbar__phone" href="tel:+79374878451">+7 937 487-84-51</a>
-                        <span class="navbar__work-time navbar__small-text">В рабочее время с 9-00 до 11-00</span>
+                    <div class="navbar__right-block">
+                        <div class="navbar__mobile">
+                            <a class="navbar__phone" href="tel:+79374878451">+7 937 487-84-51</a>
+                            <span class="navbar__work-time navbar__small-text">В рабочее время с 9-00 до 11-00</span>
+                        </div>
+                        <div class="navbar__landline">
+                            <a class="navbar__phone" href="tel:+79374878451">+7 937 487-84-51</a>
+                            <a class="navbar__email navbar__small-text" href="mailto:natei@mail.ru">natei@mail.ru</a>
+                        </div>
+                        <button class="button-o navbar_button">Взять в аренду</button>
                     </div>
-                    <div class="navbar__landline">
-                        <a class="navbar__phone" href="tel:+79374878451">+7 937 487-84-51</a>
-                        <a class="navbar__email navbar__small-text" href="mailto:natei@mail.ru">natei@mail.ru</a>
-                    </div>
-                    <button class="button-o navbar_button">Взять в аренду</button>
+                    
+                    <label for="menu__left-button" class="menu-button menu-button-left">
+                        <span class="menu-button__line"></span>
+                        <span class="menu-button__line"></span>
+                        <span class="menu-button__line"></span>
+                    </label>
                 </div>
                 <!-- /.navbar-wrap -->
             </div>
             <!-- /.container -->
         </div>
         <!-- /.navbar -->
+        
+        <input type="checkbox" id="menu__right-button" class="menu__right-button">
+        <input type="checkbox" id="menu__left-button" class="menu__right-button">
+        <div class="menu">
+            <div class="container menu-container">
+                <div class="menu-wrap">
+                    <nav class="menu__nav">
+                        <a href="#" class="menu__link">Главная</a>
+                        <a href="#" class="menu__link">Условия</a>
+                        <a href="#" class="menu__link">Курорты</a>
+                        <a href="#" class="menu__link">Новости</a>
+                        <a href="#" class="menu__link">Отзывы</a>
+                        <a href="#" class="menu__link">Контакты</a>
+                    </nav>
+                    <div class="menu__social">
+                        <a href="#" class="menu__social-link">
+                            <img src="img/menu/social-wtsp.png" class="menu__social-img" alt="">
+                        </a>
+                        <a href="#" class="menu__social-link">
+                            <img src="img/menu/social-tg.png" class="menu__social-img"alt="">
+                        </a>
+                        <a href="#" class="menu__social-link">
+                            <img src="img/menu/social-inst.png" class="menu__social-img"alt="">
+                        </a>
+                        <a href="#" class="menu__social-link">
+                            <img src="img/menu/social-vk.png" class="menu__social-img" alt="">
+                        </a>
+                    </div>
+                </div>
+                <!-- /.menu-wrap -->
+            </div>
+        </div>
+    </header>
+        <!-- /.menu -->
         <div class="hero">
             <div class="container">
                 <h1 class="hero__title">
@@ -63,7 +91,6 @@
             <!-- /.container -->
         </div>
         <!-- /.hero -->
-    </header>
     <main>
         <section class="offer bg-secondary">
             <div class="container">
@@ -556,7 +583,7 @@
             <!-- /.container -->
         </section>
         <!-- /.section rewiews -->
-        <section class="offer">
+        <section class="section offer">
             <div class="container">
                 <div class="offer__block offer-block offer-block__bg-call-2">
                     <h2 class="offer__title">Ищите где лучше</h2>
@@ -590,7 +617,7 @@
             <!-- /.container -->
         </section>
         <!-- /.offer -->
-        <section class="section forejob bg-secondary">
+        <section class="section forejob bg-tertiary">
             <div class="container">
                 <h2 class="section-title section__title">
                     О нашей работе
@@ -613,9 +640,95 @@
             <!-- /.container -->
         </section>
         <!-- /.section fore-job -->
+        <section class="section contacts bg-secondary">
+            <div class="container">
+                <h2 class="section-title section__title">
+                    Контакты
+                </h2>
+                <!-- /.section-title section__title -->
+                <div class="contacts-block">
+                    <div class="contacts-block__item">
+                        <img src="img/contacts/phone.png" alt="" class="contacts__image">
+                        <div class="contacts__text">
+                            <a href="#" class="contacts__link">+7 917 802-65-01</a>
+                        </div>
+                        <!-- /.contacts__text -->
+                    </div>
+                    <!-- /.contacts-block__item -->
+                    <div class="contacts-block__item">
+                        <img src="img/contacts/map.png" alt="" class="contacts__image">
+                        <div class="contacts__text">
+                            <address class="contacts__address">Республика Башкортостан, г.Уфа, ул.Завдоская, 15/3</address>
+                        </div>
+                        <!-- /.contacts__text -->
+                    </div>
+                    <!-- /.contacts-block__item -->
+                    <div class="contacts-block__item">
+                        <img src="img/contacts/mail.png" alt="" class="contacts__image">
+                        <div class="contacts__text">
+                            <a href="#" class="contacts__link">liliya.gumerova.2012@mail.ru</a>
+                        </div>
+                        <!-- /.contacts__text -->
+                    </div>
+                    <!-- /.contacts-block__item -->
+                </div>
+                <!-- /.contacts-block -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /.section contacts -->
+        <div class="map" id="map">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad0e1a6819ff3a352093bcbbb041f828722f33e50bbb1b232c5f54f2caacd4c40&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
+        </div>
+        <!-- /#map.map -->
 
     </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-block">
+                <div class="footer__description footer-block__child">
+                    <h4 class="footer__title">Турагент Lili-Travel</h4>
+                    <span class="footer__subtitle">Подбор туров, путевок под ваши желания!!!</span>
+                    
+                </div>
+                <!-- /.footer__description -->
+                <div class="footer__pay-info footer-block__child">
+                    <img src="img/footer/footer-pay-sbp.png" alt="" class="footer__pay-logo">
+                    <img src="img/footer/footer-pay-mir.png" alt="" class="footer__pay-logo">
+                    <img src="img/footer/footer-pay-yand.png" alt="" class="footer__pay-logo">
+                </div>
+                <!-- /.footer__pay-info -->
+                <div class="footer__contacts footer-block__child">
+                    <a href="#" class="footer__phone">+7 917 802-65-01</a>
+                    <a href="#" class="footer__mail">liliya.gumerova.2012@mail.ru</a>
+                    <div class="footer-social">
+                        <a href="#" class="footer-social__link">
+                            <img src="img/footer/social-vk.png" alt="">
+                        </a>
+                        <a href="#" class="footer-social__link">
+                            <img src="img/footer/social-inst.png" alt="">
+                        </a>
+                        <a href="#" class="footer-social__link">
+                            <img src="img/footer/social-tg.png" alt="">
+                        </a>
+                        <a href="#" class="footer-social__link">
+                            <img src="img/footer/social-wtsp.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <!-- /.footer__contacts -->
+            </div>
+            <!-- /.footer-block -->
+            <div class="footer__copyright">&copy Lili-Travel</div>
+        </div>
+        <!-- /.container -->
+    </footer>
+    <!-- /.footer -->
     <!-- Подключение виджета SPIKMI-->
+    <script src='js/my-scripts.js' type="text/javascript"></script>
     <script type="text/javascript" src="https://spikmi.org/Widget?Id=20185"></script>
+    
+    
+
 </body>
 </html>

@@ -1,14 +1,17 @@
 .navbar
-    position: fixed
-    z-index: 1
-    left: 0px
-    top: 0px
     width: 100%
-    background-color: #fff
+    background-color: #ffffffe0
     &-wrap 
         display: flex
         justify-content: space-between
         align-items: center
+    &__logo
+        margin-left: 15px
+    &__right-block
+        display: flex
+        justify-content: space-between
+        flex-basis: 100%
+        padding-left: 100px
     &__mobile, &__landline
         text-align: right 
     &__phone
@@ -24,37 +27,46 @@
         color: $text-color-light
 
 .menu
-    position: fixed
-    z-index: 1
-    top: 60px
-    left: 0px
     width: 100%
-    padding:16px 0px
-    background-color: $primary
-    transition: 0.2s
-    transform: translateY(-200%)
-    opacity: 0
-    &_activ
-        transform: translateY(0)
-        opacity: 1
+    background-color: $primary-black
+    &-wrap 
+        display: flex
+        justify-content: space-between
+        align-items: center
     &__nav
         display: flex
         align-items: center
         justify-content: space-around
     &__link
+        padding: 15px 10px
+        margin-left: 10px
         text-decoration: none
-        font-size: 17px
+        font-size: 14px
         text-transform: uppercase
         color: #fff
-    &-button
+        &:hover
+            border-top: 3px $primary-teal solid
+            padding-top: 12px
+            background-color: $primary-black-1
+    &__social
         display: flex
+        &-link
+            height:15px
+            margin:0px 10px
+        &-link img
+            height: 15px
+            padding: 0px
+            margin: 0px
+    &__right-button
+        height: 10px
+        width: 10px
+    &-button
+        display: none
         flex-direction: column
         align-items: center
         justify-content: center
         background-color: transparent
         border: none
-        border-right: 1px solid rgba(#510bba, 0.1) 
-        border-left: 1px solid rgba(#510bba, 0.1) 
         height: 60px
         width: 70px
         &__line
@@ -78,16 +90,64 @@
 
 @media (max-width:991px)
     .navbar
-        &__mobile, &__landline
+        &__right-block
+            padding-left: 20px
+        &__landline
+
+@media (max-width:800px)
+    .header
+        position: sticky
+        top:0px
+    .navbar
+        &__right-block
             display: none
-        &__logo
-            margin-right: 150px
+        &__landline
+    .menu
+        display: flex
+        position: fixed
+        z-index: 500
+        left: -200px
+        width: 200px
+        min-height: 100vh
+        background-color: #fff
+        border: 1px #d0d0d0 solid
+        overflow-y: auto
+        &-button
+            display: flex
+        &-container 
+            width: 200px
+            margin: 0px
+        &-wrap
+            display: block
+            padding-top:60px
+        &__nav 
+            display: block
+        &__link
+            display: block
+            margin: 0px
+            color: $text-color
+            &:hover 
+                background-color: $primary-teal
+                color: #ffffff
+                border: none
+                padding-top: 15px
+        &__social
+            display: flex
+            justify-content: center
+            position: absolute
+            top: 20px
+            width: 100%
+            padding-bottom: 20px
+            border-bottom: 1px #d0d0d0 solid 
+            &-img
+                filter: invert(100%)
+        
+
 
 @media (max-width:576px)
     .logo
         display: none
-    .menu
-        &__nav
-            flex-direction: column
-        &__link
-            margin-bottom: 20px
+    
+[id="menu__right-button"]:checked ~ .menu 
+    left: 0px
+    transition-duration: 0.5s
