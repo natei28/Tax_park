@@ -5,15 +5,10 @@ body
 img
     max-width: 100%
 
-.header1
-    position: sticky
-    top:-60px
-    z-index: 999
-
 .sticky-header
     position: fixed
     width: 100%
-    top:-50px
+    top:-70px
     z-index: 999
 
 .section
@@ -27,15 +22,27 @@ img
         margin-bottom: 100px
 
 .button-o
-    border: 2px solid $primary
+    border: 2px solid $primary-teal
     text-transform: uppercase
     text-decoration: none
-    padding: 17px 22px
+    padding: 16px 22px
     font-size: 12px
-    color: $primary
-    background-color: #fff
+    color: $primary-black
+    background: none
     +bold
-
+    &:hover 
+        cursor: pointer
+        background-color: #099c84
+        color: #ffffff
+        transition-duration: 0.2s
+.button-slide
+    color: #fff
+    border-color: #fff
+    &:hover
+        background-color: $primary-teal
+        border-color: $primary-teal
+        transition-duration: 0.2s
+        transition-delay: 0s
 .button
     border: none
     text-transform: uppercase
@@ -88,10 +95,14 @@ input[type="checkbox"]
             border: 1px solid #dddddd
             margin-right: 20px          
 
-@media (max-width:576px)
+@media (max-width:800px)
     .header
-        position: sticky
+        position: fixed
+        width: 100%
         top:0px
+        z-index: 2
+
+@media (max-width:576px)
     .button
         font-size: 10px
         &-o

@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lili Travel</title>
-    
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/my-slider.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -14,31 +14,32 @@
         <div class="navbar">
             <div class="container">
                 <div class="navbar-wrap">
-                    <label for="menu__right-button" class="menu-button menu-button-right">
-                        <span class="menu-button__line"></span>
-                        <span class="menu-button__line"></span>
-                        <span class="menu-button__line"></span>
+                    <label for="menu-button-left" class="menu-button menu-button-left">
+                        <span class="menu-button__line menu-button__line-left"></span>
+                        <span class="menu-button__line menu-button__line-left"></span>
+                        <span class="menu-button__line menu-button__line-left"></span>
                     </label>
                     <div class="logo navbar__logo">
                         <strong class="logo__text">Lili Travel</strong>
                         <span class="logo__description">Ваш проводник в мир отдыха</span>
                     </div>
+                    <input type="checkbox" id="menu-button-right" class="menu-button-right">
                     <div class="navbar__right-block">
                         <div class="navbar__mobile">
                             <a class="navbar__phone" href="tel:+79374878451">+7 937 487-84-51</a>
-                            <span class="navbar__work-time navbar__small-text">В рабочее время с 9-00 до 11-00</span>
+                            <span class="navbar__work-time navbar__small-text">Пн - пт: с 9-00 до 19-00</span>
                         </div>
                         <div class="navbar__landline">
                             <a class="navbar__phone" href="tel:+79374878451">+7 937 487-84-51</a>
                             <a class="navbar__email navbar__small-text" href="mailto:natei@mail.ru">natei@mail.ru</a>
                         </div>
-                        <button class="button-o navbar_button">Взять в аренду</button>
+                        <button class="button-o navbar_button">Подобрать Тур</button>
                     </div>
                     
-                    <label for="menu__left-button" class="menu-button menu-button-left">
-                        <span class="menu-button__line"></span>
-                        <span class="menu-button__line"></span>
-                        <span class="menu-button__line"></span>
+                    <label for="menu-button-right" class="menu-button menu-button-right">
+                        <span class="menu-button__line menu-button__line-right"></span>
+                        <span class="menu-button__line menu-button__line-right"></span>
+                        <span class="menu-button__line menu-button__line-right"></span>
                     </label>
                 </div>
                 <!-- /.navbar-wrap -->
@@ -47,8 +48,8 @@
         </div>
         <!-- /.navbar -->
         
-        <input type="checkbox" id="menu__right-button" class="menu__right-button">
-        <input type="checkbox" id="menu__left-button" class="menu__right-button">
+        <input type="checkbox" id="menu-button-left" class="menu-button-left">
+        
         <div class="menu">
             <div class="container menu-container">
                 <div class="menu-wrap">
@@ -78,9 +79,33 @@
                 <!-- /.menu-wrap -->
             </div>
         </div>
-    </header>
         <!-- /.menu -->
-        <div class="hero">
+    </header>
+    <div class="owl-carousel owl-theme" id="slider">
+        <div class="slide" style="background-image: url('img/hero/herobg-1.png')">
+            <div class="slide__block">
+               <div class="container slide__container">
+                    <span class="slide__title">Подборки туров в нашией группе Watsap</span>
+                    <span class="slide__description">Только <b>лучшее</b> и <b>актуальное.</b></span></span>
+                    <div class="slider__button-wrap">
+                        <input type="submit" class="button-o button-slide" value="Вступить в группу">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('img/hero/herobg-1.png')">
+            <div class="slide__block">
+                <div class="container slide__container">
+                    <span class="slide__title">Организуйnt свой отпуск вместе с нами</span>
+                    <span class="slide__description">Создай <b>Cвой Тур</b></span>
+                    <div class="slider__button-wrap">
+                        <input type="submit" class="button-o button-slide" value="Подобрать Тур">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- /.hero <div class="hero">
             <div class="container">
                 <h1 class="hero__title">
                     Гарантия <br> минимальной цены <br> в нашем парке
@@ -88,9 +113,7 @@
                 <span class="hero__subtitle">от 1600 р.</span>
                 <button class="button hero__button">Взять в аренду</button>
             </div>
-            <!-- /.container -->
-        </div>
-        <!-- /.hero -->
+        </div>-->
     <main>
         <section class="offer bg-secondary">
             <div class="container">
@@ -540,49 +563,49 @@
             <!-- /.container -->
         </section>
         <!-- /.section steps -->
-        <section class="section rewiews">
+        <section class="section feedback">
             <div class="container">
                 <h2 class="section-title section__title">
                     Отзывы наших клиентов
                 </h2>
-                <div class="rewiews-slider">
-                    <div class="rewiews-slider__item">
-                        <div class="rewiews-slider__text">
+                <div class="feedback-slider owl-carousel owl-theme" id="slider-feedback">
+                    <div class="feedback-slider__item slide">
+                        <div class="feedback-slider__text">
                             Очень часто мы сталкиваемся с недопониманием от сотрудников банка и иной раз идти не хочется. в очередной раз навешают лапшу на уши и культурно пошлют...
                         </div>
-                        <!-- /.rewiews-slider__text -->
-                        <img src="img/rewiews/rewiew-1.png" alt="" class="rewiews-slider__image">
-                        <span class="rewiews-slider__name">Иванова Екатерина <br>Москва</span>
-                        <!-- /.rewiews-slider__name -->
+                        <!-- /.feedback-slider__text -->
+                        <img src="img/feedback/feedback-1.png" alt="" class="feedback-slider__image">
+                        <span class="feedback-slider__name">Иванова Екатерина <br>Москва</span>
+                        <!-- /.feedback-slider__name -->
                     </div>
-                    <!-- /.rewiews-slider__item -->
-                    <div class="rewiews-slider__item">
-                        <div class="rewiews-slider__text">
+                    <!-- /.feedback-slider__item -->
+                    <div class="feedback-slider__item slide">
+                        <div class="feedback-slider__text">
                             Очень часто мы сталкиваемся с недопониманием от сотрудников банка и иной раз идти не хочется. в очередной раз навешают лапшу на уши и культурно пошлют...
                         </div>
-                        <!-- /.rewiews-slider__text -->
-                        <img src="img/rewiews/rewiew-2.png" alt="" class="rewiews-slider__image">
-                        <span class="rewiews-slider__name">Иванова Екатерина <br>Москва</span>
-                        <!-- /.rewiews-slider__name -->
+                        <!-- /.feedback-slider__text -->
+                        <img src="img/feedback/feedback-2.png" alt="" class="feedback-slider__image">
+                        <span class="feedback-slider__name">Иванова Екатерина <br>Москва</span>
+                        <!-- /.feedback-slider__name -->
                     </div>
-                    <!-- /.rewiews-slider__item -->
-                    <div class="rewiews-slider__item">
-                        <div class="rewiews-slider__text">
+                    <!-- /.feedback-slider__item -->
+                    <div class="feedback-slider__item slide">
+                        <div class="feedback-slider__text">
                             Очень часто мы сталкиваемся с недопониманием от сотрудников банка и иной раз идти не хочется. в очередной раз навешают лапшу на уши и культурно пошлют...
                         </div>
-                        <!-- /.rewiews-slider__text -->
-                        <img src="img/rewiews/rewiew-3.png" alt="" class="rewiews-slider__image">
-                        <span class="rewiews-slider__name">Иванова Екатерина <br>Москва</span>
-                        <!-- /.rewiews-slider__name -->
+                        <!-- /.feedback-slider__text -->
+                        <img src="img/feedback/feedback-3.png" alt="" class="feedback-slider__image">
+                        <span class="feedback-slider__name">Иванова Екатерина <br>Москва</span>
+                        <!-- /.feedback-slider__name -->
                     </div>
-                    <!-- /.rewiews-slider__item -->
+                    <!-- /.feedback-slider__item -->
                 </div>
-                <!-- /.rewiews-slider -->
+                <!-- /.feedback-slider -->
                 <!-- /.section-title section__title -->
             </div>
             <!-- /.container -->
         </section>
-        <!-- /.section rewiews -->
+        <!-- /.section feedback -->
         <section class="section offer">
             <div class="container">
                 <div class="offer__block offer-block offer-block__bg-call-2">
@@ -725,6 +748,8 @@
     </footer>
     <!-- /.footer -->
     <!-- Подключение виджета SPIKMI-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
     <script src='js/my-scripts.js' type="text/javascript"></script>
     <script type="text/javascript" src="https://spikmi.org/Widget?Id=20185"></script>
     
